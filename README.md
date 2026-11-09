@@ -1,0 +1,1 @@
+# Philosopher AI: chat with Kafka, Dostoevsky, or Marcus Aurelius, answering in their voice, grounded in the books you upload.
