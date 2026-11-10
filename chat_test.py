@@ -11,7 +11,9 @@ while True:
     if q.lower() in ("exit", "quit"):
         break
 
+    print("searching books...")
     passages = search(PERSONA["id"], q, k=4)
+    print(f"found {len(passages)} passages, calling Gemini...")
     system_prompt = build_system_prompt(PERSONA, passages)
     answer = generate(system_prompt, history[-6:], q)
 
