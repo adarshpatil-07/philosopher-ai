@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPersonas } from "./api";
 import PersonaPicker from "./components/PersonaPicker";
-import Chat from "./components/Chat ";
+import Chat from "./components/Chat";
 
 export default function App() {
   const [personas, setPersonas] = useState([]);
