@@ -48,3 +48,17 @@ button { font-family: inherit; cursor: pointer; }
 .input-row button:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .error-msg { padding: 24px; color: #e0a0a0; }
+
+.books-panel { padding: 16px 20px; border-bottom: 1px solid #3a322b; background: #1a1613; }
+.books-panel h3 { margin: 0 0 10px; font-size: 1rem; }
+.books-panel ul { list-style: none; padding: 0; margin: 0 0 12px; }
+.books-panel li { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid #2a231e; }
+.books-panel li button { background: none; border: none; color: #e0a0a0; }
+.books-panel form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.books-panel form input[type="text"], .books-panel form input:not([type]) {
+  flex: 1; min-width: 140px; padding: 8px; border-radius: 6px;
+  border: 1px solid #3a322b; background: #1f1a16; color: inherit; font-family: inherit;
+}
+.books-panel form button { padding: 8px 16px; border: none; border-radius: 6px; background: #c9a46c; color: #14110f; font-weight: bold; }
+.books-panel form button:disabled { opacity: 0.5; cursor: not-allowed; }
+.hint-small { font-size: 0.85rem; color: #a89f94; margin: 8px 0 0; }

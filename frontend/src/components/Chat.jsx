@@ -1,8 +1,10 @@
+import BookManager from "./BookManager";
 import { useEffect, useRef, useState } from "react";
 import { sendChat } from "../api";
 
 export default function Chat({ persona, onBack }) {
   const [messages, setMessages] = useState([]);
+  const [showBooks, setShowBooks] = useState(false);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [showSources, setShowSources] = useState(false);
@@ -53,6 +55,9 @@ export default function Chat({ persona, onBack }) {
           ← Back
         </button>
         <h2>{persona.name}</h2>
+        <button className="back" onClick={() => setShowBooks((s) => !s)}>
+  Books
+</button>
         <label className="toggle">
           <input
             type="checkbox"
@@ -62,6 +67,7 @@ export default function Chat({ persona, onBack }) {
           Show sources
         </label>
       </header>
+      {showBooks && <BookManager persona={persona} />}
 
       <div className="messages">
         {messages.length === 0 && (
